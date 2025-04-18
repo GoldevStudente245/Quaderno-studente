@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SPIEGAZIONE</title>
+</head>
+<body>
+    <h1>APPUNTI ESERCIZIO - Spiegazione:</h1>
+<a href="compito_20241015.html"><button>torna indietro</button></a>
+<br><br><br>
+
+<h1>TRACCIA:</h1>
+    Realizzare una pagina web che abbia un titolo centrato e che ci sia la <br> possibilità di selezionare dei valori: vuol dire se per esempio su un campo <br> invece di mettere un campo vuoto, metto una lista in maniera tale che si possa <br>selezionare l'oggetto di un menu' e quando premo submit richiama una pagina che sarà <br>di tipo php insieme all'html. <br><br><br>
+
+
+    UN RISTORANTE CHIEDE DI AGGIORNARE LA SUA PAGINA CHE AL MOMENTO E' DI TIPO <br> STATICO E PREVEDE L'INTERO MENU' PUBBLICATO SU UNA PAGINA E PER MODERNARE IL SITO <br> WEB CHIEDE DI INSERIRE. COME SFONDO UN PIATTO TIPICO TRA LE SUE SPECIALITA'. <br> GLI UTENTI CHE ACCEDERANNO AL SITO AVRANNO LA POSSIBILITA' DI SELEZIONARE <br>TRA I VARI PIATTI DEL RISTORANTE ATTRAVERSO IL MENU' A TENDINA E QUESTO MENU' <br>A TENDINA CI SARA' DISPONIBILI I PIATTI VARI TRA PRIMO, SECONDO, CONTORNO, DOLCE E BEVANDE.<br><br>
+    MENU:<br>
+    PRIMI<br>
+    SECONDI<br>
+    CONTORNO<br>
+    DOLCE<br>
+    E DARE UN NOME AL RISTORANTE<br><br>
+
+    OBIETTIVO FINALE (STEP SUCCESSIVO):<br>
+    Nel momento in cui premo il bottone le info che ha selezionato l'utente sono passate nella pagina php e mi dirà che ha ordinato stampando quello che ha scelto e l'informazione che ho preso nel php viene estrapolato nel DB e mi scriverà 5 primi quindi avro' una tabellina di questi 5 primi, saranno inviati nel php ed elaborati per essere visualizzati nell'action page.<br>
+    </p>
+    <br><br><br>
+
+
+<h1>SPIEGAZIONE:</h1>
+    <p>La differenza di caricare una pagina web in locale e caricarla sul server e' lo step di oggi.</p>
+    <p>Quindi verificare se una pagina web viene lanciata sul server.</p>
+    
+    <p>Successivamente andare su HTDOCS di XAMPP creare la cartella relativa al mio progetto, metterci un immagine dentro al progetto che venga caricata dalla pagina web e fare il test se il server e' attivo se il server e' giu'.</p>
+
+    <p>Se il server e' giu' la parte scritta viene interpretata, ma la parte che riguarda il caricamento dell'immagine non va buon fine.</p>
+    <p>Perche' il riferimento e' a una pagina a un elemento che sta sul server.</p>
+    <p>Le pagine web non stanno in locale da noi ma stanno da qualche parte quindi se il server non e' accessibile, i dati non vengono tirati giu'.</p>
+    <p>Nella cartella htdocs con all'interno del progetto ho inserito tutti gli elementi del progetto quindi la pagina di registrazione, ecc.. .</p>
+    <p>La pagina non e' in locale perche' l'abbiamo messa la pagina in uno spazio server, quindi per richiamare la pagina, abbiamo bisogno di "http://" che per noi non lo e' ma sarebbe localhost: cioe' l'indirizzo: 127.0.0.1/e scrivo il nome del file in cui ho all'interno della cartella di progetto.</p>
+    <p>Metto la sottocartella es:127.0.0.1/progetto1 e mi compare la root.</p>
+    <p>Andiamo alla pagina di registrazione: per prima cosa, butto giu' un attimo il server, quindi vado in xamp e clicco stop a fianco Apache nel pannello di controllo, faccio un refresh della pagina e lui cerca di caricare la pagina che sta sul server e ci aspettiamo che non sia raggiungibile perche' la pagina non e' piu' in locale e quindi se il server e' giu', non va.</p>
+    <p>Dopo fatto il test, nel form abbiamo delle variabili e devono essere inviate per essere elaborate.</p>
+    <p>Ma come si trattano i dati dentro una pagina lato server?</p>
+    <p>Su XAMPP possiamo gestire delle pagine php.</p>
+    <p>Si puo' mettere anche il php dentro l'html e viceversa: l'apertura del php e': &lt;?php; mentre la chiusura e': ?> per far in modo che quello che contengo all'interno dei due tag ho la possibilità di inserirlo in un file html.</p>
+    <p>La pagina php posso scriverla dentro il file html, ma di solito quando premo il bottone e quindi abbiamo la action="" che richiama la pagina .php, in realtà la sto chiamando sempre nell'html, in realtà si puo' fare un altro file php, ma la richiamate, sempre dentro l'html, ci deve essere.</p>
+    <p>La pagina php per conto suo non serve se non e' richiamata dentro un html perche' il risultato deve essere elaborato in qualche modo.</p>
+    <p>&lt;form action="ristorante.php" method="POST"&gt;</p>
+    <p>&lt;/form&gt;</p>
+    <p>Questo ci serve per passare i dati che metto nella pagina web mentre il metodo POST sta indicare come vengono passati i campi es: email e password verso la pagina php.</p>
+    <p>Passo questi nomi con un aggancio che e' dato dall'azione dell'http cioe' il metodo POST; e infine fare un una connessione al database.</p>
+
+    <br><br>
+
+
+    <a href="compito_20241015.html"><button>torna indietro</button></a>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SPIEGAZIONE</title>
+</head>
+<body>
+    <h1>Spiegazione Esercizio</h1>
+    <br>
+
+    <a href="compito_20241008.html"><button>Torna indietro</button></a><br><br><br>
+
+    <h2>TRACCIA</h2>
+Progettare una pagina web che abbia una immagine della struttura del form ed con la seguente pagina php.<br> Inserire un form anagrafico contente i seguenti campi:<br><br>
+
+I campi sono: <br>
+Username<br>
+Surname<br>
+Email<br>
+Password<br>
+Codice fiscale<br>
+Sesso<br>
+Anno di corso<br>
+Sezione<br>
+Tipo di partecipante<br>
+<br><br>
+<h2>CODICE HTML:</h2>
+<img src="codice.png" width="900px" height="400px"><br><br>
+
+Parto da una pagina statica.<br> 
+Lo step iniziale e' il disegno della pagina, creo una cartella all'interno:<br> C:/xampp/htdocs/esercizio, in cui ci metto il lavoro. <br><br>
+
+Nella cartella del progetto inserisco una pagina html e una pagina php.<br><br> 
+
+Nell'html abbiamo quindi un form e all'interno della sua sintassi c'e':<br> 
+una action="file.php" => Specifica la pagina PHP a cui inviare i dati;<br><br>
+
+e il method="POST" => Indica che i dati verranno inviati con il metodo POST<br> (piu' sicuro rispetto al GET per l'invio di dati sensibili)..<br><br>
+
+Per ogni campo abbiamo un input e ho utilizzato un 'placeholder="" ' in cui<br> specifica un breve suggerimento che descrive il valore previsto di un campo<br> input. <br><br>
+
+Ogni campo contiene il name="":  che rappresenta il nome della variabile con<br> cui verra' richiamato il valore nella pagina PHP. Il nome della variabile e' la<br> parte piu' importante di un campo.<br><br>
+
+Ogni campo ha un type="" appropriato (es. text, email, password, number,<br> ecc.), in base alle necessita' dell'esercizio.<br><br>
+
+I <label> servono per descrivere i campi e migliorare l'accessibilita'.<br> Un'etichetta puo' essere associata direttamente a un input utilizzando<br> l'attributo for="".<br><br>
+
+Infine abbiamo il bottone, in cui ha la funzione di inviare i dati che ha <br>inserito l'utente nella pagina php.
+<br><br><br>
+
+
+
+
+<h2>CODICE PHP:</h2>
+if ($_SERVER["REQUEST_METHOD"] == "POST"){<br>
+    <br><br>
+    $variabili = array(<br>
+    &emsp;&emsp;&emsp;&emsp;"Username" => $_POST['Username'],<br>
+    &emsp;&emsp;&emsp;&emsp;"Surname" => $_POST['Surname'],<br>
+    &emsp;&emsp;&emsp;&emsp;"Email" => $_POST['Email'],<br>
+    &emsp;&emsp;&emsp;&emsp;"Password" => $_POST['Password'],<br>
+    &emsp;&emsp;&emsp;&emsp;"Codice_Fiscale" => $_POST['Codice_Fiscale'],<br>
+    &emsp;&emsp;&emsp;&emsp;"Sesso" => $_POST['Sesso'],<br>
+    &emsp;&emsp;&emsp;&emsp;"Anno_di_corso" => $_POST['Anno_di_corso'],<br>
+    &emsp;&emsp;&emsp;&emsp;"Sezione" => $_POST['Sezione'],<br>
+    &emsp;&emsp;&emsp;&emsp;"Tipo_di_partecipante" => $_POST['Tipo_di_partecipante'] ?? ''<br>
+    );<br>
+    <br>
+    foreach ($variabili as $key => $value) {<br>
+        &emsp;&emsp;&emsp;&emsp; echo "<strong>$key: </strong> $value";<br>
+        &emsp;&emsp;&emsp;} <br>
+} <br><br>
+
+<br><br>
+per la parte del php, invece, le variabili nel form: name="var", quando clicco sul<br> bottone e vedro' idati inseriti in input e se c'e' anche la pagina, e puo' inviarti dei dati.<br><br>
+
+Quando clicco il tasto "invia" mi compare il nome che ho<br> scritto nel input del form; ovviamente per far questo nel php devo<br> dichiarare una variabile in questo caso name: $name=$_POST['name'];<br><br>
+
+Visto che abbiamo una grande quantita' di variabili istanzio un array contenente tutte le variabili del form<br><br> 
+
+faccio un if in cui serve a controllare se il form e' stato inviato con il metodo POST. <br><br>
+
+Successivamente, faccio il post per ogni variabile: <br>
+associa la chiave "Username" al valore inviato tramite il metodo POST nel <br> campo del form con name="Username", ed e' uguale per tutte le variabili. <br><br>
+
+E infine faccio un foreach in cui stampo tutti i valori contenuti all'interno dell'array.
+
+echo "Il tuo nome e': " . $name; //il "." concatena stringhe, numeri, variabili
+<br><br>
+
+E come ultimo passaggio e':<br> come passare i dati del form alla tabella quindi inviare i dati nel DB.<br> Ma c'e' un passaggio dei dati verso al DB, ma lo devo connnettere: perche'<br> devi accedere hai miei dati? molto simile alla connessione di rete: perche' accedi alla mia connessione di rete?<br><br>
+
+<br><br><a href="compito_20241008.html"><button>Torna indietro</button></a><br>
+</body>
+</html>

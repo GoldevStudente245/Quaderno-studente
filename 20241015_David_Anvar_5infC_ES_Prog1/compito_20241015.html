@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu ristorante</title>
+    <style>
+		@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+		
+        body {
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			background-image: url('sfondo-sito.png');
+			background-size: cover;
+			background-attachment: fixed; /* Sfondo fisso */
+			background-position: center; /* Centra lo sfondo */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .menu {
+            background-image: url('sfondo.png');
+            background-size: cover;
+            width: 1000px;
+            height: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            justify-content:flex-start;
+			border-radius: 20px;
+        }
+
+        .title {
+			font-family: "Dancing Script", serif;
+			font-optical-sizing: auto;
+			font-weight: 900;
+            height: 10%;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+		#title-ristorante{
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			font-size: 50px;
+			text-align: center;
+			color: white;	
+		}
+
+		.container-title{
+			width: 1000px;
+			background-color: rgb(76, 76, 255);
+			border-radius: 20px;
+		}
+
+		.container-body-title{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+
+		.title-piatti{
+			font-size: 20px;
+		}
+
+        .menu-section {
+            display: flex;
+            width: 100%;
+        }
+
+        .menu-category {
+            width: 40%;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+		.container-scelta{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+		}
+.left{
+    margin-top: 30px;
+    padding: 20px;
+	background-color: rgb(33, 181, 235);
+}
+
+.right {
+	width: auto;
+    margin-top: 30px;
+    padding: 20px;
+	background-color: rgb(33, 181, 235);
+}
+
+
+.left, .right {
+	display: flex;
+	flex-direction: column;
+    justify-content: center; /* Spaziatura tra le due colonne */
+    width: 30%;  /* Imposta la larghezza per ogni sezione */
+	border-radius: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+select {
+    width: 100%;  /* Allinea il select all'interno della colonna */
+    padding: 10px;
+    margin-bottom: 15px;  /* Distanza tra le opzioni */
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Stile per il pulsante 'Invia' */
+input[type="submit"] {
+    background-color: #ff5c5c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    align-items: center;
+    width: 50%;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff3d3d;
+    transform: scale(1.05);
+}
+
+		button {
+			background-color: #ff5c5c; /* Colore di sfondo rosso */
+			color: white; /* Colore del testo bianco */
+			font-size: 16px; /* Dimensione del font */
+			padding: 10px 20px; /* Spaziatura interna */
+			border: none; /* Rimuove il bordo */
+			border-radius: 5px; /* Angoli arrotondati */
+			cursor: pointer; /* Aggiunge un cursore a forma di mano quando ci si passa sopra */
+			transition: background-color 0.3s ease, transform 0.2s ease; /* Effetto di transizione */
+		}
+
+		button:hover {
+			background-color: #ff3d3d; /* Colore di sfondo più scuro al passaggio del mouse */
+			transform: scale(1.05); /* Aumenta leggermente la dimensione del pulsante */
+		}
+
+	select {
+		background-color: #ff5c5c;
+		color: white;
+		padding: 10px;
+		border-radius: 5px;
+		width: 80%;
+		height: 50px;
+	}
+
+	.input{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	/* Stile per il pulsante 'Invia' */
+	input[type="submit"] {
+		width: 10%;
+		background-color: #ff5c5c;
+		color: white;
+		padding: 10px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s ease, transform 0.2s ease;
+	}
+    </style>
+</head>
+<body>
+
+	<div class="container-body-title">
+	<div class="container-title">
+		<h1 id="title-ristorante">RISTORANTE RIVERA</h1>
+	</div>
+</div>
+<hr>
+<div class="container">
+    <div class="menu">
+        <div class="title">IL NOSTRO MENU!</div>
+        
+        <div class="menu-section">
+            <div class="menu-category primi">
+				<div class="title-piatti"><strong><p>PRIMI</p></strong></div>
+				<strong><p>Spaghetti alle vongole veraci</strong></p>
+				<p><strong>Linguine allo scoglio </strong>(con frutti di mare misti come gamberi, calamari e cozze)</p>
+				<p><strong>Risotto ai frutti di mare </strong>(con cozze, gamberi, calamari e pesce bianco)</p>
+				<p><strong>Fettuccine con astice e pomodorini</strong></p>
+				<p><strong>Zuppa di pesce </strong>(con diversi tipi di pesce e crostacei)</p>
+				<p><strong>Trofie al pesto di mare </strong>(pesto con frutti di mare)</p>
+				<p><strong>Cavatelli con bottarga e gamberi</strong></p>
+				<p><strong>Tagliatelle al nero di seppia con calamari</strong></p>
+			</div>
+			<hr>
+			<div class="menu-category secondi">
+				<div class="title-piatti"><strong><p>SECONDI</p></strong></div>
+				<p><strong>Frittura mista di pesce</strong> (gamberi, calamari, pesce bianco e alici)</p>
+				<p><strong>Grigliata mista di pesce</strong> (spigola, orata, branzino, gamberi, calamari)</p>
+				<p><strong>Filetto di branzino al forno (con pomodorini, olive e capperi)</p>
+				<p><strong>Trancio di tonno alla griglia</strong>(con sesamo e salsa di soia)</p>
+				<p><strong>Orata alla mediterranea</strong> (al forno con pomodorini, olive, aglio e rosmarino)</p>
+				<p><strong>Calamari ripieni</strong> (ripieni di pane, prezzemolo e aglio)</p>
+				<p><strong>Astice alla catalana</strong> (astice con pomodorini, cipolla rossa, prezzemolo e olio d’oliva)</p>
+				<p><strong>Pesce spada alla griglia</strong> (con caponata siciliana)</p>
+			</div>
+		</div>
+		
+
+		<br><br><br>
+
+		<div class="menu-section">
+			<div class="menu-category">
+				<div class="title-piatti"><strong><p>CONTORNI</p></strong></div>
+				<p><strong>Patate al forno</strong> (con rosmarino e aglio)</p>
+				<p><strong>Insalata mista</strong> (con pomodori, cetrioli, e olive)</p>
+				<p><strong>Verdure grigliate</strong> (zucchine, melanzane, peperoni)</p>
+				<p><strong>Fagiolini al vapore</strong> (con aglio e olio d'oliva)</p>
+				<p><strong>Purè di patate </strong>(cremoso e vellutato)</p>
+				<p><strong>Caponata siciliana</strong> (con melanzane, pomodori, olive e capperi)</p>
+				<p><strong>Patate fritte</strong> (crocanti fuori, morbide dentro)</p>
+				<p><strong>Riso pilaf </strong>(con erbe aromatiche)</p>
+			</div>
+			<hr>
+			<div class="menu-category">
+				<div class="title-piatti"><strong><p>DOLCI</p></strong></div>
+				<p>Tiramisù (cremoso con mascarpone e caffè)</p>
+				<p>Cheesecake ai frutti di bosco (con una base croccante)</p>
+				<p>Profiteroles (con crema pasticcera e cioccolato fuso)</p>
+				<p>Cannoli siciliani (con ricotta, canditi e gocce di cioccolato)</p>
+				<p>Panna cotta (con coulis di frutti rossi)</p>
+				<p>Torta caprese (al cioccolato fondente e mandorle)</p>
+				<p>Semifreddo al limone (fresco e cremoso)</p>
+				<p>Gelato artigianale (in vari gusti, come vaniglia, cioccolato e pistacchio)</p>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="container-scelta">
+	<div class="left">
+		<form class="scelta" action="ristorante.php" method="POST">
+			<label for="scelta primo">Segli il tuo primo:</label>
+			<select name="primi">
+				<option value="nulla">nulla</option>
+				<option value="Spaghetti alle vongole veraci">Spaghetti alle vongole veraci</option>
+				<option value="Linguine allo scoglio">Linguine allo scoglio</option>
+				<option value="Risotto ai frutti di mare">Risotto ai frutti di mare</option>
+				<option value="Fettuccine con astice e pomodorini">Fettuccine con astice e pomodorini</option>
+				<option value="Zuppa di pesce">Zuppa di pesce</option>
+				<option value="Trofie al pesto di mare">Trofie al pesto di mare</option>
+				<option value="Cavatelli con bottarga e gamberi">Cavatelli con bottarga e gamberi</option>
+				<option value="Tagliatelle al nero di seppia con calamari">Tagliatelle al nero di seppia con calamari</option>
+			</select> <br>
+
+		<label for="scelta contorno">Segli il tuo contorno:</label>
+			<select name="contorno">
+				<option value="nulla">nulla</option>
+				<option value="Patate al forno">Patate al forno (con rosmarino e aglio)</option>
+				<option value="Insalata mista">Insalata mista (con pomodori, cetrioli, e olive)</option>
+				<option value="Verdure grigliate">Verdure grigliate (zucchine, melanzane, peperoni)</option>
+				<option value="Fagiolini al vapore">Fagiolini al vapore (con aglio e olio d'oliva)</option>
+				<option value="Purè di patate">Purè di patate (cremoso e vellutato)</option>
+				<option value="Caponata siciliana">Caponata siciliana (con melanzane, pomodori, olive e capperi)</option>
+				<option value="Patate fritte">Patate fritte (crocanti fuori, morbide dentro)</option>
+				<option value="Riso pilaf">Riso pilaf (con erbe aromatiche)</option>
+			</select> <br>
+	</div>
+
+<div class="right">
+	<label for="scelta secondo">Segli il tuo secondo:</label>
+	<select name="secondi">
+		<option value="nulla">nulla</option>
+        <option value="Frittura mista di pesce">Frittura mista di pesce</option>
+        <option value="Grigliata mista di pesce">Grigliata mista di pesce</option>
+        <option value="Filetto di branzino al forno">Filetto di branzino al forno</option>
+        <option value="Trancio di tonno alla griglia">Trancio di tonno alla griglia</option>
+		<option value="Orata alla mediterranea">Orata alla mediterranea</option>
+		<option value="Calamari ripieni">Calamari ripieni</option>
+		<option value="Astice alla catalana">Astice alla catalana</option>
+		<option value="Pesce spada alla griglia">Pesce spada alla griglia</option>
+    </select> <br>
+
+	<label for="scelta dolce">Segli il tuo dolce:</label>
+	<select name="dolce">
+		<option value="nulla">nulla</option>
+        <option value="Tiramisù">Tiramisù (cremoso con mascarpone e caffè)</option>
+        <option value="primi_piatti">Linguine allo scoglio</option>
+        <option value="Cheesecake ai frutti di bosco">Cheesecake ai frutti di bosco (con una base croccante)</option>
+        <option value="dolce">Fettuccine con astice e pomodorini</option>
+		<option value="Profiteroles">Profiteroles (con crema pasticcera e cioccolato fuso)</option>
+		<option value="Cannoli siciliani">Cannoli siciliani (con ricotta, canditi e gocce di cioccolato)</option>
+		<option value="Panna cotta">Panna cotta (con coulis di frutti rossi)</option>
+		<option value="Torta caprese">Torta caprese (al cioccolato fondente e mandorle)</option>
+		<option value="Semifreddo al limone">Semifreddo al limone (fresco e cremoso)</option>
+		<option value="Gelato artigianale">Gelato artigianale (in vari gusti, come vaniglia, cioccolato e pistacchio)</option>
+    </select> <br>
+</div>
+</div>
+<div class="input">
+	<input type="submit" value="Invia">
+</div>
+</form>
+<br><br>
+
+<a href="spiegazione_compito_20241015.html"><button>SPIEGAZIONE</button></a>
+<br><br><br>
+
+<a href="../Index.html"><button>HOME</button></a>
+<br><br>
+
+</body>
+</html>

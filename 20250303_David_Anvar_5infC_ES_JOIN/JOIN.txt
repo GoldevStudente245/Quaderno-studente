@@ -1,0 +1,16 @@
+CREATE TABLE users (
+id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+username_utente VARCHAR(100),
+cognome VARCHAR(100),
+password VARCHAR(255)
+);
+
+
+CREATE TABLE prenotazione (
+id_prenotazione INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+id_cliente INT,
+data_prenotazione DATE NOT NULL,
+data_scadenza DATE NOT NULL,
+metodo_pagamento VARCHAR(100) NOT NULL,  
+FOREIGN KEY (id_cliente) REFERENCES users (id_cliente)
+);

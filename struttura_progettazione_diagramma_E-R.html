@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domande e Struttura per Modello E/R</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="sidebar" onmouseenter="expandSidebar()" onmouseleave="collapseSidebar()">
+        <div class="menu"><h3>INDICE</h3></div>
+        <a href="index.html">HOME</a>
+        <a href="esercizi.html">ESERCIZI</a>
+        <a href="esercizi_a_parte.html">ESERCIZI A PARTE</a>
+        <a href="teoria.html">TEORIA</a>
+        <a href="appunti.html">APPUNTI</a>
+    </div>
+
+    <div id="main">
+        <h1>Domande e Struttura per il Modello E/R</h1>
+   
+    <p></p>
+    <a href="teoria.html" class="link-button"><button>Torna indietro</button></a><br>
+    <section>
+        <h2>Domande che mi sono posto:</h2>
+        <ul>
+            <li>Cos'è una relazione?</li>
+            <li>Cos'è una entità?</li>
+            <li>Cosa sono gli attributi all'interno del modello E/R?</li>
+            <li>Cos'è una tupla?</li>
+            <li>Cos'è una ennupla?</li>
+            <li>Ci sono altri nomi simili al nome tupla?</li>
+            <li>Quanti tipi di diagrammi ci sono nel modello E/R?</li>
+            <li>Cos'è il diagramma UML?</li>
+            <li>Quanti tipi di relazione ci sono?</li>
+            <li>Una entità può avere più di una PK?</li>
+            <li>Quante chiavi esistono nel modello E/R?</li>
+            <li>Quante chiavi sono necessarie per realizzare un modello E/R?</li>
+            <li>Quante chiavi ci sono nel modello E/R per creare il DB?</li>
+            <li>Cos'è la cardinalità?</li>
+            <li>N:M o N:N sono la stessa cosa?</li>
+            <li>Quando ci sono due entità con una cardinalità N:N la relazione si trasforma come un'entità ponte?</li>
+            <li>Quanti tipi di cardinalità ci sono?</li>
+            <li>Cosa serve la cardinalità per creare il DB?</li>
+            <li>Nel modello E/R che domanda bisogna porsi per creare la cardinalità tra le entità?</li>
+            <li>Nel DB è necessario mettere come attributo, ad esempio: ID_attributo_entità, oppure ci possono essere altri attributi qualsiasi che possono essere una private key?</li>
+            <li>Che cos'è una query?</li>
+            <li>Quali sono i passaggi per creare una query?</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Analisi e Creazione del Modello E/R:</h2>
+        <p><strong>Lettura del testo più e più volte fino a quando c'è l'ho ben chiaro in testa:</strong> <br>Questo è il primo passo per comprendere appieno il problema e identificare le informazioni necessarie.</p>
+        <p><strong>Analizzo il problema:</strong><br> È fondamentale comprendere bene il contesto del problema, perché è da qui che partirai per identificare entità, relazioni e attributi.</p>
+        <p><strong>Sottolineo le entità, relazioni e attributi:</strong> <br>Questo è il passaggio in cui identifichi i principali oggetti (entità) e le connessioni tra di essi (relazioni), così come le caratteristiche specifiche (attributi) che ogni entità avrà.</p>
+        <p><strong>Riscrivo entità, relazioni e attributi per avere un'idea nella creazione del DB:</strong> <br>Riformulare e organizzare questi concetti ti aiuterà a visualizzare meglio come rappresentarli nel database.</p>
+        <p><strong>Successivamente creo uno schema logico indicando PK e FK:</strong><br> Questo passaggio è essenziale per tradurre il modello E/R in uno schema che possa essere implementato in un DBMS. La PK (Primary Key) identifica univocamente ogni record di una tabella, mentre la FK (Foreign Key) rappresenta una connessione tra le tabelle, basata su relazioni.</p>
+        <p><strong>Creo il diagramma del problema complesso:</strong><br> Un diagramma Entità-Relazione (ER) ti aiuta a visualizzare le entità, le relazioni e le cardinalità tra di esse in modo chiaro.</p>
+        <p><strong>Mi pongo delle domande per la cardinalità:</strong><br> Le domande riguardanti la cardinalità sono cruciali per determinare se una relazione è uno-a-uno, uno-a-molti o molti-a-molti. Rispondere a queste domande ti permetterà di progettare correttamente le tabelle e le relazioni nel DB.</p>
+        <p><strong>Successivamente applico la cardinalità tra le varie entità:</strong><br> Applicare correttamente la cardinalità ti consente di definire le connessioni tra le tabelle nel database, così da garantire l'integrità referenziale.</p>
+        <p><strong>Riscrivo i dati sotto forma di tabella:</strong> <br> Questo è il passaggio finale per organizzare concretamente i dati, creando tabelle che rappresentano le entità, le relazioni e gli attributi. È qui che inizi a vedere la struttura del database in modo pratico.</p>
+        <p><strong>Infine lo applico sul DB, scrivendo le Query delle tabelle:</strong><br> Una volta che hai definito il modello, lo puoi tradurre effettivamente in un DB, creando tabelle, definendo chiavi primarie e straniere, e impostando i vincoli di integrità.</p>
+    </section>
+
+    <br><br>
+</div>
+
+    <a href="teoria.html" class="link-button"><button>Torna indietro</button></a><br> <br><br>
+    <script src="script.js"></script>
+</body>
+</html>

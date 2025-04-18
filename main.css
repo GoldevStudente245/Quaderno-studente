@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: margin-left 0.3s;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70px;
+    background: #333;
+    color: white;
+    padding-top: 60px;
+    overflow-x: hidden;
+    transition: width 0.3s;
+    z-index: 1;
+}
+
+#sidebar a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    background: #575757;
+}
+
+#sidebar.expanded {
+    width: 250px;
+}
+
+#sidebar:not(.expanded) a {
+    display: none;
+}
+
+.menu-title, #sidebar.expanded a {
+    display: block;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.closebtn {
+    display: none;
+}
+
+#sidebar.expanded .closebtn {
+    display: block;
+}
+
+#main {
+    margin-left: 80px;
+    padding: 16px;
+    transition: margin-left 0.3s;
+}
+
+.openbtn {
+    font-size: 20px;
+    padding: 10px 15px;
+    background: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.openbtn:hover {
+    background: #555;
+}
+
+a, p {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#struttura {
+    color: #4CAF50;
+}
+
+.bottone {
+    background: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

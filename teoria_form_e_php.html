@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>form e php</title>
+</head>
+<body>
+
+
+
+    <div id="sidebar" onmouseenter="expandSidebar()" onmouseleave="collapseSidebar()">
+        <div class="menu"><h3>INDICE</h3></div>
+        <a href="index.html">HOME</a>
+        <a href="esercizi.html">ESERCIZI</a>
+        <a href="esercizi_a_parte.html">ESERCIZI A PARTE</a>
+        <a href="teoria.html">TEORIA</a>
+        <a href="appunti.html">APPUNTI</a>
+    </div>
+
+    <div id="main">
+    <center><h1>TEORIA HTML (Hyper Text Markup Language)</h1></center>
+    <br><br>
+    <a href="teoria.html" class="link-button"><button>Torna indietro</button></a><br>
+
+<br><br>
+<img src="form.png" width="400" height="500">
+    <h3>Sintassi di GET e POST:</h3>
+    <p>METODO GET CHE E' CONSIDERATO DI DEFAULT:</p>
+    <img src="codice1.png" width="600" height="200">
+    <br><br><br><br>
+    <p>METODO POST:</p>
+    <img src="codice2.png" width="600" height="200">
+    <br><br><br>
+
+    <strong>DEFINIZIONE METODO POST:</strong> <br>
+    Il metodo POST viene utilizzato per inviare dati a un server per creare/aggiornare una risorsa. <br>
+    I dati inviati al server tramite POST vengono memorizzati nel corpo della richiesta HTTP. <br><br>
+    
+    Come funziona a livello di server:<br>
+    Quando il server riceve una richiesta POST, può accedere ai dati inviati attraverso l'oggetto request <br>
+    (ad esempio, in PHP, usando $_POST per ottenere i dati). Il server può quindi elaborare questi dati, <br>
+    come ad esempio inserire informazioni in un database, inviare un'email, o restituire una risposta personalizzata<br> all'utente.<br><br>
+
+    <br>
+    <hr>
+    <h3>Differenza tra registrazione e Login:</h3>
+La registrazione crea un record all'interno della tabella.<br>
+Il login confronta le credenziali inserite con il record presenti.<hr><br><br>
+
+<p>URL (appunti):</p>
+get:<br>
+file:///C:/action_page.html?menu=SECONDO&cars=audi
+<br><br>
+
+post:<br> 
+file:///C:/action_page.html
+
+
+
+<br><br><br>
+    <h2>SPIEGAZIONE FORM</h2>
+        <p>il tag form e' l'elemento che definisce un modulo HTML. <br> Un modulo permette agli utenti di inserire dati che poi vengono inviati a un server 
+            (ad esempio, a un file PHP).</p>
+<p>All'interno di questo form si trovano:</p>
+
+<p>action="nome_file.php" =>  Questo e' l'URL o il percorso a cui inviare i dati del modulo una volta che l'utente preme il tasto di invio. <br> In questo caso, i dati saranno inviati al file php corrispondente che si trova nella stessa cartella del file HTML.</p>
+
+<p>method="POST" => Indica che i dati del modulo devono essere inviati tramite il metodo POST. <br> Questo significa che i dati non saranno visibili nell'URL del browser, ma verranno inviati nel corpo della richiesta HTTP. <br>Il metodo POST e' generalmente usato per inviare informazioni sensibili, come una password.</p>
+
+<p> il tag label => serve per associare un testo descrittivo a un campo di input. <br>In questo caso, il testo "Inserisci email" appare come etichetta del campo dove l'utente deve scrivere la propria email.</p>
+
+<p>Questo e' un campo di input di tipo testo. <br>L'utente puo' inserire la propria email. <br> Il name="email" e' importante perche' il valore inserito in questo campo verrà inviato al server con il nome "email", che sarà poi accessibile nel file PHP.</p>
+
+<p>infine, c'e' il bottone di invio del modulo. <br>Quando l'utente preme questo pulsante, il modulo viene inviato al server e i dati inseriti nei campi vengono inviati al file php corrente.</p><br>
+
+
+Che differenza c'e' tra GET e POST?<br>
+il GET si vede nel URL: segna la composizione dei parametri. <br>Es: first_name e last_name.<br><br>
+
+fname e lname sono campi che vengono composti ed e' la parte più importante del passaggio dei valori ed è il nome della variabile.<br><br> 
+
+Siccome esiste il metodo POST, come faccio a recuperare le variabili che passano dal HTML al web server?<br> come si dichiara una variabile in php?<br> si mette il dollaro davanti: <br>'$', poi il nome della variabile "$var" e infine dico che dalla pagina html che sto utilizzando fai passare la variabile che ha name="fname" tramite il metodo POST:<br><br>
+
+$var = $_POST['fname'];
+<br><br><br>
+Una piccola precisazione sull'html e php:
+<br><br>
+Il server e' impostato di default affinche' possa interpretare il file cioe' il codice php, soltanto in file con estensione .php . <br> Se metto lo script php dentro ad un file con estensione .html, e se il server non e' impostato,<br> l'interpretazione dello script non funziona, ma puo' essere impostato;<br> ma di default non è corretto, <br>ed e' buona tecnica di programmazione perche' il server vuole dedicare l'interpretazione solo alle pagine php.
+
+<br><br>
+<hr>
+<strong>Differenza tra browser e motore di ricerca:</strong><br><br>
+La differenza tra il browser e il motore di ricerca è che il browser è<br>
+l'applicazione che utilizziamo per navigare su internet (ad esempio Chrome, <br>
+Safari o Edge), mentre il motore di ricerca è un sito o servizio che utilizziamo <br>
+con il browser per cercare informazioni e siti su internet (ad esempio Google o Bing).<br>
+<hr>
+<br><br>
+
+<strong>Differenza tra una pagina web in locale e una pagina caricata sul server:</strong>
+<br><br>
+
+<strong>Pagina Web in Locale (Localhost):</strong><br><br>
+
+-La pagina è memorizzata e accessibile solo sul tuo computer. Non è visibile ad altri utenti.<br><br>
+
+-Si può accedere tramite un URL come http://localhost o http://127.0.0.1 <br>(questi indirizzi fanno riferimento al computer locale).<br><br>
+
+-Server locale: Per visualizzare la pagina in locale, <br>bisogna avere un server web o un server integrato che esegue il file nell'ambiente di sviluppo.
+<br><br><br>
+
+
+<strong>Pagina caricata sul server:</strong><br>
+-Una pagina web su un server è un file caricato su un server web remoto, <br>il quale può essere accessibile da qualsiasi dispositivo connesso a Internet, tramite un dominio o un indirizzo IP pubblico.<br><br>
+
+-Accesso: La pagina è accessibile da chiunque abbia una connessione internet e l'indirizzo (URL) corretto. <br> Può essere visualizzata da utenti in tutto il mondo. <br>L'URL inizia con http:// o https:// (ad esempio https://www.miosito.com/pagina.html).<br><br>
+
+-Il server web ospita il file e lo invia al browser del client che lo richiede.<br> Il server può anche gestire richieste più dinamiche (ad esempio, per interagire con database) tramite linguaggi come PHP.
+
+
+
+
+
+
+
+<br>
+
+<hr id="separatore">
+<br>
+<center><h1>TEORIA PHP (Hypertext Preprocessor)</h1></center>
+<br><br>
+
+
+&lt;?php <br>
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {<br>
+  		// Recupera i dati dal modulo HTML<br>
+  		$first_name = isset($_POST["fname"]) ? $_POST["fname"] : "";<br>
+  		$last_name = isset($_POST["lname"]) ? $_POST["lname"] : "";<br>
+          <br><br>
+  		// Stampa i dati a schermo<br>
+  		echo "Dati ricevuti dal modulo:";<br>
+  		echo "Nome: " . htmlspecialchars($first_name);<br>  // htmlspecialchars per evitare problemi di sicurezza
+  		echo "Cognome: " . htmlspecialchars($last_name)";<br>
+	} else {<br>
+  		// Se non e' una richiesta POST, mostra un messaggio di errore<br>
+  		echo "Errore: Metodo non consentito";<br>
+	}<br>
+?><br>
+
+<br><br><br>
+<hr>
+<div>
+<h2>SPIEGAZIONE</h2>
+
+<div>
+<p><strong>1. Raccolta dei dati inviati tramite il modulo (con il metodo POST):</strong></p>
+    <div>
+        <code>
+        $email = $_POST["email"];<br>
+        $password = $_POST["password"];<br>
+        </code>
+    </div>
+Questa parte del codice raccoglie i dati inviati tramite il metodo POST da un modulo HTML. <br>La superglobale <span>$_POST</span> contiene tutti i dati inviati con il metodo POST. <br>In questo caso, il codice recupera il valore dei campi 'email' e 'password' inviati dall'utente.
+</div>
+
+<div>
+<p><strong>2. Visualizzazione dei dati con echo:</strong></p>
+    <div>
+    <code>
+    echo $email . "<br>" . $password;<br>
+    </code>
+    </div>
+<p>Il comando <strong>echo</strong> in PHP serve a visualizzare i valori sullo schermo. <br>In questo caso, il codice concatena la variabile <span>$email</span> con il tag HTML <strong>&lt;br&gt;</strong>, <br>e successivamente concatena anche la variabile <span>$password</span>, <br>per far sì che i valori vengano mostrati su due righe separate.</p>
+</div>
+<div>
+<p><strong>Non è sicuro mostrare la password in chiaro in un'applicazione reale.</strong></p>
+</div>
+</div>
+<br><br>
+<hr>
+<br><br>
+<a href="https://github.com/maboglia/CorsoPHP/blob/master/esempi/005variables.md">Utilizzo delle variabili in php</a>
+<br><br>
+<h3>array in php:</h3>
+
+<strong>Sintassi:</strong> <br>
+
+Questa è un array di variabili: (chiaramente è d'obbligo fare il post per ogni valore contente nell'array) <br><br>
+<code>
+<br>
+    $variabili = array(<br>
+    &nbsp;&nbsp;&nbsp;"var1" => $_POST['var1'],<br>
+    &nbsp;&nbsp;&nbsp;"var2" => $_POST['var2'],<br>
+    &nbsp;&nbsp;&nbsp;"var3" => $_POST['var3'],<br>
+    &nbsp;&nbsp;&nbsp;"var4" => $_POST['var4'],<br>
+    &nbsp;&nbsp;&nbsp;"var5" => $_POST['var5'],<br>
+    &nbsp;&nbsp;&nbsp;"var6" => $_POST['var6'],<br>
+    &nbsp;&nbsp;&nbsp;"var7" => $_POST['var7'],<br>
+    &nbsp;&nbsp;&nbsp;"var8" => $_POST['var8'],<br>
+    &nbsp;&nbsp;&nbsp;"var9" => $_POST['var9'] ?? ''<br>
+    );<br><br>
+</code>
+
+In PHP, un array è una struttura dati che permette di memorizzare più valori in una singola variabile. <br> Ogni valore nell'array è identificato da una "chiave", che può essere numerica o associativa. <br>Gli array sono utilizzati per raggruppare più dati, che possono essere dello stesso tipo o anche di tipi diversi. <br><br>
+
+$cars = array("Volvo", "BMW", "Toyota");<br>
+
+Questa spiegazione è già descritta nell'esercizio:
+<a href="20241008_David_Anvar_5ifC_ESProgettazione_Pagina_WEB/spiegazione_compito_20241008.html"><button>nel primo esercizio del quaderno</button></a>
+
+<br><br><br>
+<hr>
+<br><br><br>
+
+isset e unset:<a href="20241028_David_Anvar_5infC_ES_/es2.php"><button>è spiegato nel primo esercizio del quaderno</button></a>
+
+<br><br><br>
+<hr>
+<br><br><br>
+
+Il codice PHP si intervalla al codice HTML, delimitato dai tag
+&lt;?php ... ?> . <br>
+I delimitatori permettono al server web di riconoscere il codice, che viene
+eseguito.<br>
+L’output viene combinato con la parte statica che sta al di fuori dai tag PHP, e il tutto è inviato al browser (client). <br>
+Per “eseguire” lo script, devo richiederlo al web-server tramite il browser
+ http://localhost/miapagina.php .<br><br><br>
+
+PHP è un linguaggio di programmazione case sensitive, il che significa che le lettere maiuscole e minuscole sono considerate diverse. <br>Ad esempio, la variabile $nome e la variabile $Nome sono due variabili diverse in PHP. <br>Tuttavia, ci sono alcune eccezioni a questa regola. <br> Ad esempio, i nomi delle funzioni in PHP non sono case sensitive, <br> il che
+significa che la funzione count() e la funzione COUNT() sono equivalenti. <br>
+Inoltre, PHP è insensibile agli spazi bianchi, il che significa che gli spazi bianchi (come gli spazi, i tab e le nuove righe) non influiscono sulla semantica del codice PHP. <br> Ad esempio, il
+seguente codice PHP è equivalente:<br><br>
+$nome='Mario'; è equivalente a $nome = 'Mario';<br><br>
+Questa regola non vale per le stringhe. <br>Gli spazi bianchi all'interno di una stringa sono considerati parte della stringa stessa.<br><br>
+<br><br><br>
+<hr>
+<br><br><br>
+ Il tag textarea rappresenta un controllo di modifica di testo in formato testo normale a più righe, <br>utile quando si vuole consentire agli utenti di inserire una quantità considerevole di testo libero.<br><br>
+    ● il tag option viene utilizzato per definire un elemento contenuto in un nella select, un optgroup o un datalist. <br>
+    ● il tag datalist per fornire un elenco di opzioni predefinite per un campo di input.<br>
+    ● il tag select: per creare menu a tendina.<br>
+    ● il tag optgroup crea un raggruppamento di opzioni all'interno di un elemento select.
+<br><br><br>
+<hr>
+<br><br>
+
+
+<h3>Invio dei dati con HTTP - GET</h3>
+    43 Reti di Calcolatori HTTP e il Word Wide Web <br>
+        - I dati del form possono essere inviati con una richiesta
+        HTTP di tipo GET; <br>
+        - I parametri sono accodati all’URL della risorsa che li riceve usando
+        in genere il carattere ? come separatore; <br>
+        - Questo metodo permette di associare la richiesta con i parametri
+        ad un URL (può essere usato come hyperlink, generato in
+        automatico,..); <br>
+        - Esiste un limite al numero dei caratteri e inoltre l’URL deve essere
+        composto da caratteri ASCII; <br>
+        - I caratteri non ASCII e i caratteri speciali (?,=,&,..) sono codificati con la sequenza % seguito dalle due cifre esadecimali. <br>
+        - Lo spazio è in genere codificato con il carattere + invece che con %20. <br>
+        - Il metodo GET non dovrebbe essere usato per passare informazione sensibile (es. password) perché è in chiaro nell’URL e può essere memorizzato nei proxy. 
+        
+<br><br><br> 
+<hr>
+<br><br><br>
+
+<h3>Quoting</h3>
+In PHP, il "quoting" si riferisce al processo di inserimento di citazioni (o delimitatori) all'interno di una stringa <br> per indicare in modo esplicito dove inizia e dove finisce la stringa stessa. <br>Le citazioni sono utilizzate per definire il testo letterale di una stringa. <br>PHP supporta diverse forme di quoting, tra cui:<br><br>
+<strong>Single Quotes:</strong> Le stringhe racchiuse tra singole citazioni (') sono considerate "stringhe con singole citazioni" <br> e tutto il loro contenuto è trattato come testo letterale. <br>Le variabili all'interno di queste stringhe non vengono valutate o espanse.<br><br>
+Esempio:<br>
+$nome = 'John';<br>
+echo 'Il mio nome è $nome'; // Output: Il mio nome è $nome<br><br>
+<strong>Double Quotes:</strong> Le stringhe racchiuse tra doppie citazioni (")consentono la valutazione e l'espansione <br> delle variabili all'interno di esse. <br> Le sequenze di escape come \n e \t sono interpretate all'interno delle doppie citazioni.<br>
+Esempio:<br>
+$nome = 'John';<br>
+echo "Il mio nome è $nome"; // Output: Il mio nome è John
+
+<br><br><br>
+<hr>
+<br><br><br>
+
+<h3>Escaping</h3>
+L'escaping nelle stringhe PHP si riferisce alla pratica di inserire un carattere di escape, <br>ovvero un carattere preceduto da un backslash (\),<br> per rappresentare caratteri speciali all'interno di una stringa.<br> Ad esempio, per rappresentare una singola virgoletta all'interno di una stringa racchiusa tra virgolette doppie,<br> è necessario utilizzare il carattere di escape (\) prima della virgoletta, <br>in questo modo: <br>"L'auto è \"rossa\"" . <br><br>In PHP, i caratteri speciali che richiedono l'utilizzo di un carattere di escape <br>includono le virgolette singole e doppie, il backslash stesso, il carattere di nuova riga (\n), il carattere di ritorno a capo (\r),<br> il carattere di tabulazione (\t), il carattere di allineamento verticale (\v), il carattere di cancellazione (\f) e altri. <br><br>
+
+L'escaping è spesso utilizzato quando si manipolano stringhe che contengono caratteri speciali, <br><br>ad esempio quando si creano query SQL o <br>quando si manipolano stringhe HTML. <br>In questi casi, è importante utilizzare l'escaping per evitare errori di sintassi o vulnerabilità di sicurezza.
+
+<br><br><br>
+<hr>
+<br><br><br>
+
+<h3>not null coalescing operator</h3>
+L'operatore "??", not null coalescing operator, è stato introdotto in PHP 7 e serve a restituire il primo valore che non è null.<br> La sintassi è la seguente:
+$valore = $operando1 ?? $operando2 ?? $operando3;<br>
+In questo esempio, viene valutato il primo operando. <br>Se non è null, il suo valore viene assegnato a
+$valore. <br>Se invece è null, viene valutato il secondo operando e così via, <br>finché non viene trovato un
+valore che non sia null.<br><br>
+L'operatore "??", quindi, è molto utile per assegnare un valore di default a una variabile se non è
+ancora stata assegnata un valore. <br>Ad esempio:<br>
+$nome = $_GET['nome'] ?? 'Anonimo';<br>
+In questo esempio, se la chiave nome esiste nell'array $_GET, il suo valore viene assegnato a
+$nome. <br>Altrimenti, viene assegnato il valore "Anonimo".
+<br><br>
+
+
+Per garantire la robustezza delle password durante la registrazione, <br>è possibile implementare una serie di regole che
+verifichino se le password soddisfano determinati criteri, come la lunghezza minima, la presenza di lettere maiuscole,
+minuscole, <br>numeri e caratteri speciali. Ecco come puoi farlo:<br><br>
+● Lunghezza Minima: Assicurati che la password abbia una lunghezza minima. Ad esempio, una password deve
+contenere almeno 8 caratteri.<br><br>
+● Lettere Maiuscole e Minuscole: Richiedi la presenza sia di lettere maiuscole che minuscole nella password. Questo
+rende la password più robusta.<br><br>
+● Numeri: Assicurati che la password contenga almeno un numero.<br><br>
+● Caratteri Speciali: Richiedi la presenza di almeno un carattere speciale nella password, <br>come
+"!@#$%^&*()_+[]{}|;:,.&lt;>/?". I caratteri speciali aggiungono ulteriori complessità alla password.
+
+<br><br><a href='https://zetcode.com/php/function/'><button>Funzioni in PHP</button></a>
+<br><br><br>
+<hr>
+<br>
+
+
+<h3>connessione al database:</h3><br>
+
+<h3>Come stampare una tabella di un database:</h3><br>
+
+
+controllo della connessione del DB<br>
+
+</div>
+<br><br><a href="teoria.html" class="link-button"><button>Torna indietro</button></a><br><br>
+
+<script src="script.js"></script>
+</body>
+</html>

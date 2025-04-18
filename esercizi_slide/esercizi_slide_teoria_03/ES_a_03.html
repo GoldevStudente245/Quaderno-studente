@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Es a</title>
+</head>
+<body>
+    <h1>ES a) Validazione dati form</h1>	
+        <center>
+        <h2>REGISTRAZIONE</h2>
+<!-- Esercizio a -->
+            <form action="login.php" method='POST'>
+
+                <input 
+                type="text" 
+                name="username" 
+                id="username"
+                maxlength="50" 
+                pattern="[A-Za-z ]+"
+                placeholder="Inserisci il tuo nome"
+                ><p>    
+
+                <input 
+                type="text" 
+                name="surname" 
+                maxlength="50" 
+                id="surname" 
+                pattern="[A-Za-z']+"
+                placeholder="Inserisci il tuo cognome"><p>
+
+                <input 
+                type="date" 
+                name="DDN" 
+                maxlength="50" 
+                id="DDN"
+                pattern="^[0-9]{8}$"
+                min="1900-01-01"       
+                max="2024-12-31"
+                placeholder="Inserisci Data di nascita"><p>
+
+                <input 
+                type="text" 
+                name="CF" 
+                maxlength="16" 
+                id="CF" 
+                pattern="^[A-Za-z0-9]{16}$"
+                placeholder="es: ABCDEF12G34H567I"><p>
+
+                <input 
+                type="email" 
+                name="email" 
+                maxlength="50" 
+                id="email" 
+                placeholder="inserisci email"><p>
+
+                <input 
+                type="tel" 
+                name="cellulare" 
+                maxlength="12" 
+                id="cellulare" 
+                pattern="^\d{2}\d{10}$"
+                placeholder="Inserisci numero di cellulare"><p>
+
+                <input 
+                type="text" 
+                id="cap"
+                name="cap" 
+                required pattern="^\d{5$" 
+                placeholder="Inserisci CAP Es: 00100"><p>
+                
+                <input 
+                type="text" 
+                id="comune"
+                name="comune" 
+                placeholder="Inserisci il comune"><p>
+            
+                <input 
+                type="text" 
+                id="provincia"
+                name="provincia" 
+                placeholder="Inserisci la provincia"><p>
+
+                <input 
+                type="text" 
+                name="nickname" 
+                maxlength="30" 
+                id="nickname" 
+                placeholder="Inserisci il tuo nickname"><p>
+
+                <input 
+                style="width: 200px;"
+                type="password" 
+                name="password" 
+                id="password"
+                maxlength="50"
+                pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+={}\[\]:;'<>,.?/|\\-]).{8,}$"  
+                placeholder="Inserisci Password (min 8 carat.)"><p>
+                            
+                <input type="submit" value="Invia">
+        </form>
+
+        <br>
+        <a href="spiegazione_ES_a_03.html"><button>SPIEGAZIONE</button></a>
+      
+        <a href="../PDF3.html"><button>Torna indietro</button></a>    
+    </center>
+</body>
+</html>

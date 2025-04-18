@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<title>Progettazione Pagina WEB</title>
+
+<style>
+    body{
+        text-align: center;
+    }
+
+    .container{
+        width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        font-size: 25px;
+    }
+
+    img{
+        width: 450px;
+        height: 500px;
+    }
+
+    .img form{
+        width: 20%;
+    }
+</style>
+
+<body>
+    <h1>BENVENUTO AL MIO PRIMO SITO WEB!!</h1>
+    <h1>Progettazione Pagina WEB</h1>
+<div class="container">
+    <div class="img">
+        <h2>DESIGN</h2>
+        <br>
+        <img src="design.png">
+    </div>
+    <div class="form">
+        <h2>REGISTRAZIONE</h2>
+		<form action="register.php" method="POST">
+  			<input type="text" name="Username" maxlength="255" placeholder="Username" required><br><br>
+
+			<input type="text" name="Surname" maxlength="255" placeholder="Surname" required><br><br>
+
+			<input type="email" name="Email" maxlength="255" placeholder="email" required><br><br>
+
+			<input type="password" name="Password" maxlength="255" placeholder="Password" required><br><br>
+
+			<input type="text" name="Codice_Fiscale" maxlength="255" placeholder="Codice Fiscale" required><br><br>
+
+			<label for="Sesso" style=" font-size: 17px">Sesso:</label>
+            <select name="Sesso" required>
+                <option name="Sesso" value="maschio">Maschio</option>
+                <option name="Sesso" value="femmina">Femmina</option>
+                <option name="Sesso" value="altro">Altro</option>
+            </select>
+
+            <br><br>
+            <label for="Anno_di_corso " style=" font-size: 17px">Anno di corso:</label>
+			<input type="date" name="Anno_di_corso" maxlength="255" placeholder="Anno di corso" required><br><br>
+
+			<input type="text" name="Sezione" maxlength="255" placeholder="Sezione" required><br><br>
+
+            <label for="Tipo_di_partecipante" style=" font-size: 17px">Tipo di partecipante:</label>
+
+            <select name="Tipo_di_partecipante" required>
+                <option name="Tipo_di_partecipante" value="studente">Studente</option>
+                <option name="Tipo_di_partecipante" value="Docente">Docente</option>
+            </select>
+
+            <br><br>
+
+  			<input type="submit" value="Invia">
+	    </form>
+    </div>
+</div>
+<br>
+    <a href="spiegazione_compito_20241008.html"><button>SPIEGAZIONE</button></a>
+
+    <a href="../Index.html"><button>HOME</button></a>
+    <br><br>
+    <br><br>
+</body>
+</html>

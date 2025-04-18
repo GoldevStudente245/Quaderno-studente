@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index</title>
+</head>
+<link rel="stylesheet" href="main.css">
+
+<body>
+    <div id="sidebar" onmouseenter="expandSidebar()" onmouseleave="collapseSidebar()">
+        <div class="menu"><h3>INDICE</h3></div>
+        <a href="index.html">HOME</a>
+        <a href="esercizi.html">ESERCIZI</a>
+        <a href="esercizi_a_parte.html">ESERCIZI A PARTE</a>
+        <a href="teoria.html">TEORIA</a>
+        <a href="appunti.html">APPUNTI</a>
+    </div>
+    
+
+
+
+    <div id="main">
+    <h1>QUADERNO DI INFORMATICA Anvar</h1>
+    <h3>Indirizzo del quaderno:</h3> 
+        <h2>localhost/quaderno-informatica-Dev2434_classroomGithub/Index.html</h2><br>
+        
+        <h2>Attenzione!</h2>
+        <strong>Prima di accedere al database, assicurati di creare il mio account su phpMyAdmin assegnando tutti i privilegi:</strong>
+
+        <a href="accesso_credenziali.php"><button class="bottone">Crea</button></a>
+        <br><br><br><br><br><br>
+
+
+        <h1>Struttura del Quaderno di Informatica</h1>
+    
+    <section>
+        <p>Il mio quaderno d'informatica e' strutturato in questo modo:</p>
+        
+        <h2 id="struttura">STRUTTURA DELLA HOME:</h2>
+        <p>Per prima cosa, ho inserito l'URL per accedere direttamente al localhost del mio quaderno, cosi' da rendere piu' comodo e veloce <br> l'accesso al sito senza dover scrivere manualmente l'URL del quaderno.
+        <br>Prima di fare cio', nel pannello di controllo di XAMPP bisogna avviare (cliccando su 'Start') Apache e MySQL.
+        <br><br>
+        <br>Sulla home abbiamo soltanto la data della consegna dell'esercizio e il nome dell'esercizio che e' direttamente linkabile all'esercizio stesso.<br>
+        <strong>La sezione "Esercizi"</strong> indica tutti gli esercizi che sono stati pubblicati dai docenti su classroom. <br>
+        Per avere un maggior ordine gli esercizi sono classificati in ordine dalla data di consegna. <br>
+
+        <p>Ogni esercizio contiene l'accesso al sito o al DB, <br>la documentazione e per avere una maggiore comodita', le pagine php ed html non riconoscono i file con estensione .sql, <br> ho deciso di inserire un bottone che permetta di scaricare <br>direttamente il DB senza dover cercarlo nella cartella dell'esercizio.</p>
+        <br>
+        Successivamente abbiamo una <strong>sezione di esercizi che sono correlate alle slide teoriche</strong> pubblicate su classroom (le slide teoriche si trovano all'interno dei PDF). <br>
+        Questa sezione sara' tenuta per eventuali esercizi teorici futuri.<br><br>
+        <strong> E infine abbiamo la sezione "Appunti": In questa sezione ci sono tre link:</strong>
+            <br>
+            <ul>
+                <li><strong>il primo indica la struttura completa di una progettazione diagramma E-R </strong>per spiegare in base alle mie conoscenze di quello che ho capito. <br> Non solo c'e' struttura di una progettazione diagramma E-R, ma ci saranno altri argomenti trattati in classe riferenti al concetto del DataBase: <br>ES(cos'e' un diagrammaE-R, Entita', Attributi, Relazioni, le cardinalita', le forme normali, le join, ecc...). <br> Ovviamente in questa pagina parlero' di questi concetti in base alle mie conoscenze e skill.</li>
+                <br><br>
+                <li>Successivamente abbiamo la pagina: <strong>"codice scritto su carta e appunti"</strong>. <br>Indica tutto il codice che ho scritto su carta non in base agli esercizi ma solo questione di memoria e di allenamento su carta. <br>Mentre la parte appunti sono alcuni appunti casuali utili presi in classe (ps: in futuro aggiungo appunti sul mio quaderno di informatica cartaceo).</li>
+                <br><br>
+                <li>In conclusione abbiamo la pagina: <strong>"Ricerche per maggiore approfondimento"</strong>. <br>Questa pagina indica piccole ricerche utili (CHE NON FANNO PARTE DEL PROGRAMMA SCOLASTICO),<br> tra le quali alcune sono svolte in classe, altre invece sono ricerche di notiziari trovati su internet. <br>In ogni ricerca saranno incluse le fonti che ho trovato utili per la specifica ricerca che ho effettuato. <br> Queste ricerche saranno oggetto utile per la maturita'.</li>
+            </ul>
+
+
+<br><br><br><br><br>
+<h2 id="struttura">STRUTTURA DEGLI ESERCIZI:</h2>
+Ogni esercizio contiene un file html file php, una pagina di spiegazione dell'esercizio di come e' strutturato e infine il codice su carta.
+<br><br>
+<h3>I FILE HTML:</h3>
+Ogni esercizio ha principalmente una pagina home che rappresenta la pagina di riferimento o punto di ritrovo per l'esercizio. <br>Ogni pagina html ha dei bottoni che sono linkati alla pagina principale dell'esercizio per favorire una maggiore comodita' e fruibilita' <br> per il docente o studente che vuole visitare il mio quaderno. Ad es: <br>
+
+<p>Se ho fatto un login e accedo con le credenziali, quando ho fatto l'accesso posso tornare indietro senza dover cliccare la freccetta <br> in alto a sinistra a fianco alla barra degli indirizzi. <br>
+La pagina principale dell'esercizio ha anche un pulsante SPIEGAZIONE, che riporta alla pagina della spiegazione dell'esercizio stesso.
+
+<br><br><br>
+<h3>I FILE PHP:</h3>
+ogni esercizio contengono dei file php e in base all'esercizio ha la funzione del form che si trova nel file html tramite action e il method="POST". <br>In alcuni file php ho applicato l'html per la registrazione, per non avere un numero eccesso di risorse allocate per un singolo esercizio.
+
+
+<br><br><br>
+        <h3>Pagina per la spiegazione dell'esercizio:</h3>
+        <p>Ogni singolo esercizio contiene la spiegazione completa dell'esercizio, nella quale spiego:</p>
+        <ul>
+            <li>Il metodo con cui mi sono approcciato</li>
+            <li>La sintassi di ogni file HTML e PHP</li>
+            <li>Il commento del codice all'interno del file riga per riga</li>
+        </ul>
+    </section>
+<br>
+    <p><strong>PS:</strong> Il CSS in generale, cosi' come per ogni esercizio, non e' richiesto. <br>Tuttavia, se c'e' abbastanza tempo dopo aver completato l'esercizio, posso implementarlo grazie anche alle mie competenze in Tech7. <br><br>
+
+        <h3>FILE SQL:</h3>
+
+        <p>Ogni esercizio contiene un database contente le tabelle rispettive per ogni esercizio. Ogni DB e' rinominato con la data di scadenza del compito, classe, cognome e nome del database. <br>
+            ES: yyyymmdd_5infC_Anvar_nome_db.sql</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
